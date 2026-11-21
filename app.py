@@ -70,6 +70,63 @@ def cargar_paquete():
 
 
 MODELO_INTENCION, MODELO_SENTIMIENTO, PALABRAS, FRASES, ORIGEN, ERROR_PKL = cargar_paquete()
+
+
+# ---------------------------------------------------------------------
+# 1 bis. Formas conjugadas: el diccionario trae "morfar", no "morfaron"
+# ---------------------------------------------------------------------
+# Se generan solo para verbos regulares y con reemplazo de una sola palabra.
+# No se pisan formas que ya estén cargadas en el diccionario.
+CONJUGACIONES = [
+    ("o", "o", "o"), ("ás", "és", "ís"), ("a", "e", "e"),
+    ("amos", "emos", "imos"), ("áis", "éis", "ís"), ("an", "en", "en"),
+    ("é", "í", "í"), ("aste", "iste", "iste"), ("ó", "ió", "ió"),
+    ("amos", "imos", "imos"), ("asteis", "isteis", "isteis"), ("aron", "ieron", "ieron"),
+    ("aba", "ía", "ía"), ("abas", "ías", "ías"), ("aba", "ía", "ía"),
+    ("ábamos", "íamos", "íamos"), ("abais", "íais", "íais"), ("aban", "ían", "ían"),
+    ("aré", "eré", "iré"), ("arás", "erás", "irás"), ("ará", "erá", "irá"),
+    ("aremos", "eremos", "iremos"), ("aréis", "eréis", "iréis"), ("arán", "erán", "irán"),
+    ("ando", "iendo", "iendo"), ("ado", "ido", "ido"),
+]
+CLASE_VERBO = {"ar": 0, "er": 1, "ir": 2}
+LETRAS_QUE_CAMBIAN = ("c", "z", "g", "q")  # arranqué, empecé: necesitan otra ortografía
+
+
+def _formas_conjugadas(palabras):
+    """Devuelve {forma conjugada: reemplazo} para los verbos regulares del diccionario."""
+    formas = {}
+    for infinitivo, reemplazo in palabras.items():
+        if not re.fullmatch(r"[a-záéíóúñ]{3,}(ar|er|ir)", infinitivo):
+            continue
+        traduccion = str(reemplazo).strip().lower()
+        if not re.fullmatch(r"[a-záéíóúñ]{3,}(ar|er|ir)", traduccion):
+            continue
+        if " " in traduccion:
+            continue
+
+        clase_origen = CLASE_VERBO[infinitivo[-2:]]
+        clase_destino = CLASE_VERBO[traduccion[-2:]]
+        raiz_origen = infinitivo[:-2]
+        raiz_destino = traduccion[:-2]
+        if raiz_origen.endswith(LETRAS_QUE_CAMBIAN) or raiz_destino.endswith(LETRAS_QUE_CAMBIAN):
+            continue
+        if raiz_origen == raiz_destino:
+            continue
+
+        for terminaciones in CONJUGACIONES:
+            forma = raiz_origen + terminaciones[clase_origen]
+            nueva = raiz_destino + terminaciones[clase_destino]
+            if forma not in palabras:
+                formas.setdefault(forma, nueva)
+    return formas
+
+
+FORMAS_VERBALES = _formas_conjugadas(PALABRAS)
+for _forma, _traduccion in FORMAS_VERBALES.items():
+    PALABRAS.setdefault(_forma, _traduccion)
+if FORMAS_VERBALES:
+    print(f"Formas conjugadas agregadas: {len(FORMAS_VERBALES)}.")
+
 PATRON = compilar(PALABRAS)
 HAY_MODELOS = MODELO_INTENCION is not None and MODELO_SENTIMIENTO is not None
 
@@ -328,6 +385,48 @@ def pantalla_5_ambiguedad(texto, d_mango, d_cana, d_plata, d_gamba):
     # Lectura automática: la del sistema, sin intervención.
     automatico = _neutro(texto)
 
+    presentes = [
+        clave
+        for clave in TERMINOS_AMBIGUOS
+        if re.search(TERMINOS_AMBIGUOS[clave]["patron"], texto, flags=re.IGNORECASE)
+    ]
+    faltantes = [clave for clave in TERMINOS_AMBIGUOS if clave not in presentes]
+
+    # --- Si el mensaje no trae ninguna de las cuatro palabras ---
+    if not presentes:
+        hallazgos, _ = buscar_expresiones(_sin_protegidos(texto), PALABRAS, FRASES, PATRON)
+        if hallazgos:
+            lista = "".join(
+                f"<li>«{_escapar(original)}» → «{_escapar(str(reemplazo))}»</li>"
+                for original, reemplazo in hallazgos[:8]
+            )
+            detalle = (
+                "<p style='margin:8px 0 4px'>Lo que sí reconoció el diccionario en tu mensaje:</p>"
+                f"<ul style='margin:0 0 8px 18px'>{lista}</ul>"
+            )
+        else:
+            detalle = (
+                "<p style='margin:8px 0'>Tampoco hay jerga cargada en tu mensaje: "
+                "quedó casi igual, palabra por palabra.</p>"
+            )
+        tarjeta = (
+            "<div style='border:1px solid #e5e7eb; border-radius:10px; padding:12px 14px; "
+            "background:#f9fafb;'>"
+            "<b>Tu mensaje no trae ninguna de las cuatro palabras</b> "
+            "(mango, cana, plata, gamba), así que en esta pestaña no hay ambigüedad para revisar. "
+            "Ojo: eso no quiere decir que no se haya analizado; abajo está la lectura del sistema."
+            f"{detalle}"
+            "<p style='margin:8px 0 0; color:#6b7280; font-size:13px'>"
+            "Probá con: «No tengo un mango, la cana me pidió plata y encima me comí una gamba»."
+            "</p></div>"
+        )
+        return (
+            tarjeta,
+            automatico,
+            automatico,
+            "No hay términos ambiguos en el mensaje: no hubo nada que corregir.",
+        )
+
     # Lectura con las decisiones humanas: se tapa lo que la persona marcó.
     trabajo = texto
     tapados = []
@@ -347,17 +446,10 @@ def pantalla_5_ambiguedad(texto, d_mango, d_cana, d_plata, d_gamba):
 
     # --- Tarjetas: qué leyó el sistema y qué pasaría con cada lectura ---
     tarjetas = []
-    for clave, info in TERMINOS_AMBIGUOS.items():
+    for clave in presentes:
+        info = TERMINOS_AMBIGUOS[clave]
         patron = info["patron"]
         decision = decisiones[clave]
-
-        if not re.search(patron, texto, flags=re.IGNORECASE):
-            tarjetas.append(
-                '<div style="border:1px solid #e5e7eb; border-radius:10px; '
-                'padding:10px 12px; margin-bottom:8px; background:#f9fafb;">'
-                f'<b>{clave}</b> · <span style="color:#6b7280;">no aparece en el mensaje</span></div>'
-            )
-            continue
 
         quedan = len(re.findall(patron, automatico, flags=re.IGNORECASE))
         aparecen = len(re.findall(patron, texto, flags=re.IGNORECASE))
@@ -393,6 +485,12 @@ def pantalla_5_ambiguedad(texto, d_mango, d_cana, d_plata, d_gamba):
             '</div>'
         )
 
+    if faltantes:
+        tarjetas.append(
+            '<p style="color:#6b7280; font-size:13px; margin:4px 0 0;">'
+            f"No aparecen en el mensaje: {', '.join(faltantes)}.</p>"
+        )
+
     cambios = [
         f"{clave} → {'jerga' if d == OPCION_JERGA else 'literal'}"
         for clave, d in decisiones.items()
@@ -407,9 +505,131 @@ def pantalla_5_ambiguedad(texto, d_mango, d_cana, d_plata, d_gamba):
 
 
 # ---------------------------------------------------------------------
+# 4 bis. Las cuatro pantallas de la demo (como el esquema de la PPT)
+# ---------------------------------------------------------------------
+def _predecir(texto):
+    """Devuelve (intención, sentimiento, confianza) o None si no hay modelos."""
+    if not HAY_MODELOS:
+        return None
+    prob_intencion = MODELO_INTENCION.predict_proba([texto])[0]
+    prob_sentimiento = MODELO_SENTIMIENTO.predict_proba([texto])[0]
+    i = int(prob_intencion.argmax())
+    j = int(prob_sentimiento.argmax())
+    return (
+        str(MODELO_INTENCION.classes_[i]),
+        str(MODELO_SENTIMIENTO.classes_[j]),
+        round(float(prob_intencion[i]) * 100, 1),
+    )
+
+
+def _jerga_detectada(texto, tope=6):
+    hallazgos, _ = buscar_expresiones(_sin_protegidos(texto or ""), PALABRAS, FRASES, PATRON)
+    if not hallazgos:
+        return "ninguna expresión del diccionario"
+    listado = ", ".join(f"«{original}» → «{reemplazo}»" for original, reemplazo in hallazgos[:tope])
+    resto = "" if len(hallazgos) <= tope else f" y {len(hallazgos) - tope} más"
+    return f"{len(hallazgos)} expresión(es): {listado}{resto}"
+
+
+def pantalla_1(texto, umbral):
+    """1. Probá tu mensaje: intención, sentimiento, confianza y análisis semántico."""
+    intencion, sentimiento, confianza, aviso, tabla = clasificar(texto, umbral)
+
+    if not texto or not texto.strip():
+        return "", "", 0.0, "", "", tabla
+
+    neutro = _neutro(texto)
+    jerga = _jerga_detectada(texto)
+
+    if HAY_MODELOS:
+        analisis = (
+            f"Tema: {intencion.lower()}. Tono: {sentimiento.lower()}. "
+            f"Confianza en la intención: {confianza}%.\n"
+            f"Cómo lo lee el normalizador: {neutro}\n"
+            f"Jerga reconocida: {jerga}.\n"
+            "(Análisis por reglas: este Space no llama a ninguna API.)"
+        )
+    else:
+        analisis = (
+            f"Cómo lo lee el normalizador: {neutro}\n"
+            f"Jerga reconocida: {jerga}.\n"
+            "(Sin modelos cargados no hay clasificación; el resto del análisis sí funciona.)"
+        )
+
+    return intencion, sentimiento, confianza, analisis, aviso, tabla
+
+
+def pantalla_2(texto):
+    """2. Argentino vs. neutro: compara las etiquetas de las dos variantes."""
+    if not texto or not texto.strip():
+        return "", "—", "—", "Escribí un mensaje para comparar."
+
+    neutro = _neutro(texto)
+
+    if not HAY_MODELOS:
+        return (
+            neutro,
+            "Sin modelos",
+            "Sin modelos",
+            "No encontré modelos.pkl, así que no puedo comparar etiquetas. "
+            "La versión en neutro sí está arriba.",
+        )
+
+    original = _predecir(texto)
+    normalizado = _predecir(neutro)
+
+    etiqueta_original = f"{original[0]} · {original[1]} ({original[2]}%)"
+    etiqueta_neutra = f"{normalizado[0]} · {normalizado[1]} ({normalizado[2]}%)"
+
+    if original[0] == normalizado[0] and original[1] == normalizado[1]:
+        alerta = (
+            "Las dos variantes dan la misma etiqueta: normalizar la jerga no cambió "
+            "la lectura del modelo."
+        )
+    else:
+        cambios = []
+        if original[0] != normalizado[0]:
+            cambios.append(f"intención ({original[0]} → {normalizado[0]})")
+        if original[1] != normalizado[1]:
+            cambios.append(f"sentimiento ({original[1]} → {normalizado[1]})")
+        alerta = "⚠ Cambió la etiqueta al normalizar: " + " y ".join(cambios) + "."
+
+    return neutro, etiqueta_original, etiqueta_neutra, alerta
+
+
+def pantalla_3(texto):
+    """3. Traductor de jerga: normaliza el mensaje y lo vuelve a clasificar."""
+    neutro, resumen, tabla = traducir_completo(texto)
+
+    if not texto or not texto.strip():
+        return neutro, resumen, tabla, "—"
+
+    if not HAY_MODELOS:
+        return neutro, resumen, tabla, "Sin modelos.pkl: no puedo reclasificar."
+
+    intencion, sentimiento, confianza = _predecir(neutro)
+    etiqueta = f"{intencion} · {sentimiento} ({confianza}%) sobre el texto en neutro"
+    return neutro, resumen, tabla, etiqueta
+
+
+def tabla_f1():
+    return pd.DataFrame(
+        {
+            "Variante": ["Rioplatense", "Neutro"],
+            "F1 ponderado": [1.000, 1.000],
+            "Accuracy": [1.000, 1.000],
+        }
+    )
+
+
+# ---------------------------------------------------------------------
 # 5. Interfaz
 # ---------------------------------------------------------------------
-FIGURAS = [f for f in ("04_matriz_intencion.png", "05_cruce_intencion_sentimiento.png") if (AQUI / f).exists()]
+FIGURAS = [
+    ("04_matriz_intencion.png", "Matriz de confusión · intención"),
+    ("05_cruce_intencion_sentimiento.png", "Intención × sentimiento"),
+]
+FIGURAS = [(nombre, leyenda) for nombre, leyenda in FIGURAS if (AQUI / nombre).exists()]
 
 with gr.Blocks(title="Evaluación de Textos AI — TP2", theme=gr.themes.Soft()) as demo:
     gr.Markdown("# 🇦🇷 Evaluación y normalización de textos rioplatenses")
@@ -420,7 +640,12 @@ with gr.Blocks(title="Evaluación de Textos AI — TP2", theme=gr.themes.Soft())
     )
 
     with gr.Tabs():
+        # ---------------- 1 ----------------
         with gr.Tab("1. Probá tu mensaje"):
+            gr.Markdown(
+                "Intención, sentimiento, confianza y análisis semántico. "
+                "Las dos redes corren locales: si no hay modelos, la app avisa y sigue."
+            )
             with gr.Row():
                 with gr.Column(scale=3):
                     txt_1 = gr.Textbox(
@@ -435,7 +660,8 @@ with gr.Blocks(title="Evaluación de Textos AI — TP2", theme=gr.themes.Soft())
                     sal_sentimiento = gr.Textbox(label="Sentimiento detectado")
                     sal_confianza = gr.Number(label="Confianza de la intención (%)")
                     sal_aviso = gr.Textbox(label="Aviso", lines=3)
-            sal_tabla = gr.Dataframe(label="Cómo se repartieron las probabilidades", wrap=True)
+            sal_analisis = gr.Textbox(label="Análisis semántico", lines=5)
+            sal_tabla1 = gr.Dataframe(label="Cómo se repartieron las probabilidades", wrap=True)
             gr.Examples(
                 [
                     "Che, re zarpado el laburo, ¿me pasás una mano con la entrega?",
@@ -448,121 +674,146 @@ with gr.Blocks(title="Evaluación de Textos AI — TP2", theme=gr.themes.Soft())
                 inputs=txt_1,
             )
             btn_1.click(
-                clasificar,
+                pantalla_1,
                 inputs=[txt_1, umbral],
-                outputs=[sal_intencion, sal_sentimiento, sal_confianza, sal_aviso, sal_tabla],
+                outputs=[sal_intencion, sal_sentimiento, sal_confianza, sal_analisis, sal_aviso, sal_tabla1],
             )
 
+        # ---------------- 2 ----------------
         with gr.Tab("2. Argentino vs. neutro"):
             gr.Markdown(
-                "Compará tu versión en neutro con la que produce el normalizador. "
-                "Es el ejercicio que muestra si el diccionario alcanza o si falta jerga."
+                "Compara las etiquetas de las dos variantes y avisa si cambian: "
+                "así se mide si la jerga mueve la lectura del modelo."
             )
+            txt_2 = gr.Textbox(
+                lines=3,
+                label="Mensaje en argentino",
+                placeholder="Che, estoy al horno con el laburo, me colgué con la entrega",
+            )
+            btn_2 = gr.Button("Comparar variantes", variant="primary")
+            sal_neutro2 = gr.Textbox(label="Versión en neutro", lines=3)
             with gr.Row():
-                txt_2 = gr.Textbox(label="Mensaje original", lines=3)
-                manual_2 = gr.Textbox(label="Tu versión en neutro", lines=3)
-            btn_2 = gr.Button("Comparar", variant="primary")
-            sal_auto2 = gr.Textbox(label="Versión automática del normalizador", lines=3)
-            sal_veredicto = gr.Textbox(label="Resultado de la comparación")
+                sal_et_orig = gr.Textbox(label="Etiqueta · original")
+                sal_et_neutro = gr.Textbox(label="Etiqueta · en neutro")
+            sal_alerta2 = gr.Textbox(label="Alerta")
+            gr.Examples(
+                [
+                    "Che, estoy al horno con el laburo, me colgué con la entrega",
+                    "Estoy al horno con la facu, no llego ni en pedo",
+                    "Re copado el finde, fuimos a morfar algo",
+                    "Los pibes se morfaron todo y no pusieron ni un peso",
+                ],
+                inputs=txt_2,
+            )
             btn_2.click(
-                lambda original, manual: comparar(manual, _neutro(original)) if (original or "").strip() else ("", "Escribí el mensaje original."),
-                inputs=[txt_2, manual_2],
-                outputs=[sal_auto2, sal_veredicto],
+                pantalla_2,
+                inputs=txt_2,
+                outputs=[sal_neutro2, sal_et_orig, sal_et_neutro, sal_alerta2],
             )
 
+        # ---------------- 3 ----------------
         with gr.Tab("3. Traductor de jerga"):
-            gr.Markdown("Pegá un mensaje y mirá qué expresiones del diccionario se reconocen.")
-            txt_3 = gr.Textbox(lines=4, label="Mensaje", placeholder="Re copado el finde, fuimos a morfar algo")
-            btn_3 = gr.Button("Traducir", variant="primary")
+            gr.Markdown(
+                "Normaliza el mensaje y lo vuelve a clasificar, para ver qué queda "
+                "después de sacar la jerga."
+            )
+            txt_3 = gr.Textbox(
+                lines=4,
+                label="Mensaje",
+                placeholder="Re copado el finde, fuimos a morfar algo",
+            )
+            btn_3 = gr.Button("Traducir y clasificar", variant="primary")
             sal_neutro3 = gr.Textbox(label="En español neutro", lines=4)
+            sal_etiqueta3 = gr.Textbox(label="Clasificación del texto en neutro")
             sal_resumen3 = gr.Textbox(label="Qué se reconoció")
             sal_tabla3 = gr.Dataframe(label="Expresiones encontradas", headers=["Expresión", "Se convierte en"])
-            btn_3.click(
-                traducir_completo,
-                inputs=txt_3,
-                outputs=[sal_neutro3, sal_resumen3, sal_tabla3],
-            )
             gr.Examples(
                 [
                     "Che, estoy al horno con el laburo, me colgué con la entrega",
                     "Me da cosa preguntar de nuevo, pero no entendí un jopo",
-                    "Se hizo humo y quedé pagando",
+                    "Los pibes se morfaron todo y no pusieron ni un peso",
                     "Vivo en La Plata y se me rompió la caña de pescar a las 15:30",
                 ],
                 inputs=txt_3,
             )
-            with gr.Accordion("Ver todo el diccionario cargado", open=False):
-                resumen_cob = gr.Textbox(label="Resumen")
-                tabla_cob = gr.Dataframe(label="Expresiones cargadas", wrap=True)
-                demo.load(cobertura, outputs=[resumen_cob, tabla_cob])
+            btn_3.click(
+                pantalla_3,
+                inputs=txt_3,
+                outputs=[sal_neutro3, sal_resumen3, sal_tabla3, sal_etiqueta3],
+            )
 
-        with gr.Tab("4. ¿Por qué el 100% no es un logro?"):
+            with gr.Accordion("Revisión fina: ¿jerga o literal? (mango, cana, plata, gamba)", open=False):
+                gr.Markdown(
+                    "Cuatro palabras que significan dos cosas distintas. El sistema elige "
+                    "una lectura según el contexto y acá la podés revisar."
+                )
+                txt_5 = gr.Textbox(
+                    lines=2,
+                    label="Mensaje",
+                    value="No tengo un mango, la cana me pidió plata y encima me comí una gamba",
+                )
+                selects_amb = []
+                for clave, info in TERMINOS_AMBIGUOS.items():
+                    with gr.Row():
+                        with gr.Column(scale=3):
+                            gr.Markdown(
+                                f"**{clave}** · jerga: {info['sentido_jerga']} · "
+                                f"literal: {info['sentido_literal']}"
+                            )
+                        with gr.Column(scale=2):
+                            selects_amb.append(
+                                gr.Dropdown(
+                                    choices=OPCIONES_AMBIGUEDAD,
+                                    value=OPCION_AUTO,
+                                    label="Cómo leerlo",
+                                )
+                            )
+                btn_5 = gr.Button("Revisar ambigüedad", variant="secondary")
+                sal_tarjetas = gr.HTML()
+                with gr.Row():
+                    sal_auto5 = gr.Textbox(label="1. Lectura automática del sistema", lines=2)
+                    sal_final5 = gr.Textbox(label="2. Lectura con tus decisiones", lines=2)
+                sal_nota5 = gr.Textbox(label="Qué corregiste")
+                btn_5.click(
+                    pantalla_5_ambiguedad,
+                    inputs=[txt_5] + selects_amb,
+                    outputs=[sal_tarjetas, sal_auto5, sal_final5, sal_nota5],
+                )
+
+        # ---------------- 4 ----------------
+        with gr.Tab("4. Métricas"):
             gr.Markdown(
-                "El modelo acierta el **100%** del conjunto de prueba. Antes de "
-                "festejarlo, mirá la evidencia: la matriz no tiene un solo error y "
-                "cada intención tiene **un único sentimiento** asociado.\n\n"
-                "Es decir: la red de sentimiento no aprendió a detectar emociones, "
-                "aprendió a repetir la etiqueta que ya venía con la intención. "
-                "**El 100% no mide capacidad del modelo, mide que la tarea no tiene "
-                "dificultad.**"
+                "F1 por variante, matriz de confusión y análisis de lunfardo. "
+                "Los números salen de la corrida del notebook, no se calculan acá."
+            )
+            tabla_f1_ui = gr.Dataframe(
+                value=tabla_f1(),
+                label="F1 por variante (conjunto de prueba)",
+                wrap=True,
             )
             if FIGURAS:
                 with gr.Row():
-                    for figura in FIGURAS:
-                        gr.Image(str(AQUI / figura), label=figura)
+                    for nombre, leyenda in FIGURAS:
+                        gr.Image(str(AQUI / nombre), label=leyenda)
             else:
                 gr.Markdown(
                     "_Subí `04_matriz_intencion.png` y `05_cruce_intencion_sentimiento.png` "
                     "a este Space y las figuras aparecen acá solas._"
                 )
             gr.Markdown(
-                "**Los otros dos números, en una línea:** F1 ponderado 1.000 en "
-                "rioplatense y 1.000 en neutro; 166 parejas comparadas, ninguna "
-                "cambió de etiqueta al normalizarse.\n\n"
-                "**Y el lunfardo:** solo 112 de los 1.422 mensajes rioplatenses "
-                "(7,9%) tienen jerga real, y en prueba quedaron 15 casos. Con 15 "
-                "casos no se puede medir ninguna brecha: es un problema de potencia, "
-                "no un resultado."
+                "**Análisis de lunfardo.** Solo 112 de los 1.422 mensajes rioplatenses "
+                "(7,9%) tienen jerga real, y en prueba quedaron 15 casos. Con 15 casos no "
+                "se puede medir ninguna brecha: es un problema de potencia estadística, "
+                "no un resultado.\n\n"
+                "**Y el 100%.** La matriz no tiene un solo error y cada intención tiene un "
+                "único sentimiento asociado: la red de sentimiento no aprendió emociones, "
+                "aprendió la etiqueta que ya venía con la intención. El 100% mide que la "
+                "tarea no tiene dificultad, no la capacidad del modelo."
             )
-
-        with gr.Tab("5. ¿Jerga o literal?"):
-            gr.Markdown(
-                "Cuatro palabras que significan dos cosas distintas. El sistema elige "
-                "una lectura según el contexto y acá la podés revisar: mirá las dos "
-                "lecturas posibles y corregí la que corresponda."
-            )
-            txt_5 = gr.Textbox(
-                lines=2,
-                label="Mensaje",
-                value="No tengo un mango, la cana me pidió plata y encima me comí una gamba",
-            )
-            selects_amb = []
-            for clave, info in TERMINOS_AMBIGUOS.items():
-                with gr.Row():
-                    with gr.Column(scale=3):
-                        gr.Markdown(
-                            f"**{clave}** · jerga: {info['sentido_jerga']} · "
-                            f"literal: {info['sentido_literal']}"
-                        )
-                    with gr.Column(scale=2):
-                        selects_amb.append(
-                            gr.Dropdown(choices=OPCIONES_AMBIGUEDAD, value=OPCION_AUTO, label="Cómo leerlo")
-                        )
-            btn_5 = gr.Button("Revisar ambigüedad", variant="primary")
-            sal_tarjetas = gr.HTML()
-            with gr.Row():
-                sal_auto5 = gr.Textbox(label="1. Lectura automática del sistema", lines=2)
-                sal_final5 = gr.Textbox(label="2. Lectura con tus decisiones", lines=2)
-            sal_nota5 = gr.Textbox(label="Qué corregiste")
-            btn_5.click(
-                pantalla_5_ambiguedad,
-                inputs=[txt_5] + selects_amb,
-                outputs=[sal_tarjetas, sal_auto5, sal_final5, sal_nota5],
-            )
+            with gr.Accordion("Diccionario cargado (crece sin reentrenar)", open=False):
+                resumen_cob = gr.Textbox(label="Resumen")
+                tabla_cob = gr.Dataframe(label="Expresiones cargadas", wrap=True)
+                demo.load(cobertura, outputs=[resumen_cob, tabla_cob])
 
 if __name__ == "__main__":
-    import os
-    demo.launch(
-        server_name="0.0.0.0",
-        server_port=int(os.environ.get("PORT", 7860)),
-    )
+    demo.launch()
