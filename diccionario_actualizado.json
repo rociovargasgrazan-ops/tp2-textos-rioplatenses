@@ -1,0 +1,1830 @@
+{
+  "palabras": {
+    "guita": "dinero",
+    "guitas": "dinero",
+    "plata": "dinero",
+    "lucas": "dinero",
+    "tarasca": "dinero",
+    "mosca": "dinero",
+    "laburo": "trabajo",
+    "laburos": "trabajos",
+    "laburar": "trabajar",
+    "laburando": "trabajando",
+    "laburante": "trabajador",
+    "curro": "trabajo informal",
+    "currar": "estafar",
+    "changa": "trabajo temporal",
+    "changas": "trabajos temporales",
+    "morfi": "comida",
+    "morfar": "comer",
+    "yiro": "comida rápida",
+    "bondi": "colectivo",
+    "bondis": "colectivos",
+    "tacho": "taxi",
+    "vereda": "acera",
+    "ochava": "esquina",
+    "pibe": "joven",
+    "pibes": "jóvenes",
+    "piba": "joven",
+    "pibas": "jóvenes",
+    "chabón": "hombre",
+    "chabon": "hombre",
+    "chabona": "mujer",
+    "mina": "mujer",
+    "minas": "mujeres",
+    "flaco": "muchacho",
+    "guacho": "muchacho",
+    "pendejo": "joven",
+    "pendeja": "joven",
+    "turro": "persona astuta",
+    "ortiva": "persona molesta",
+    "fiaca": "pereza",
+    "bajón": "desánimo",
+    "bajon": "desánimo",
+    "bajonazo": "desánimo profundo",
+    "calentura": "enojo",
+    "bronca": "enojo",
+    "caliente": "enojado",
+    "quilombo": "problema",
+    "quilombos": "problemas",
+    "bardo": "conflicto",
+    "mambo": "problema",
+    "lío": "problema",
+    "lio": "problema",
+    "bolonqui": "desorden",
+    "chanta": "estafador",
+    "chantas": "estafadores",
+    "garca": "estafador",
+    "garcas": "estafadores",
+    "trucho": "falso",
+    "trucha": "falsa",
+    "afanar": "robar",
+    "afanaron": "robaron",
+    "afano": "robo",
+    "garpar": "pagar",
+    "garpa": "vale la pena",
+    "garparon": "pagaron",
+    "garpan": "pagan",
+    "garcar": "estafar",
+    "bicicletear": "demorar con excusas",
+    "bicicletearon": "demoraron con excusas",
+    "zafar": "salir del paso",
+    "safar": "salir del paso",
+    "zafé": "me libré",
+    "rajar": "irse",
+    "rajarse": "irse",
+    "rajó": "se fue",
+    "ligar": "recibir",
+    "ligó": "recibió",
+    "ligué": "recibí",
+    "chamuyar": "convencer con palabras",
+    "chamuyo": "discurso convincente",
+    "caretear": "fingir",
+    "rebuscar": "arreglárselas",
+    "fichar": "registrar",
+    "ficharon": "registraron",
+    "engarzar": "insistir",
+    "joder": "molestar",
+    "jode": "molesta",
+    "romper": "molestar",
+    "rompés": "molestás",
+    "rompes": "molestas",
+    "copado": "agradable",
+    "copada": "agradable",
+    "copados": "agradables",
+    "grosso": "excelente",
+    "groso": "excelente",
+    "zarpado": "exagerado",
+    "zarpada": "exagerada",
+    "facha": "elegante",
+    "choto": "malo",
+    "chota": "mala",
+    "piolita": "astuto",
+    "gauchada": "favor",
+    "gauchadas": "favores",
+    "q": "que",
+    "xq": "porque",
+    "pq": "porque",
+    "tmb": "también",
+    "bn": "bien",
+    "xfa": "por favor",
+    "xfis": "por favor",
+    "dsp": "después",
+    "dp": "después",
+    "tdv": "todavía",
+    "nqv": "no quiero ver",
+    "slds": "saludos",
+    "grax": "gracias",
+    "okis": "de acuerdo",
+    "chirola": "poco dinero",
+    "chirolas": "poco dinero",
+    "manguear": "pedir dinero",
+    "mangueo": "pedido de dinero",
+    "changuita": "trabajo temporal",
+    "changuitas": "trabajos temporales",
+    "changuear": "hacer trabajos temporales",
+    "currito": "trabajo corto",
+    "pibito": "joven",
+    "pibita": "joven",
+    "capo": "excelente persona",
+    "crack": "muy bueno",
+    "turrada": "acto de viveza",
+    "pendejada": "travesura",
+    "pendejadas": "travesuras",
+    "boludo": "tonto",
+    "boluda": "tonta",
+    "boludez": "tontería",
+    "boludeces": "tonterías",
+    "gil": "tonto",
+    "gilada": "tontería",
+    "giladas": "tonterías",
+    "ortiba": "delator",
+    "careta": "falso",
+    "caretaje": "fingimiento",
+    "chamuyero": "conversador convincente",
+    "birra": "cerveza",
+    "birras": "cervezas",
+    "milanga": "milanesa",
+    "milangas": "milanesas",
+    "choripán": "sándwich de chorizo",
+    "picada": "tabla de fiambres",
+    "heladera": "refrigerador",
+    "pileta": "piscina",
+    "nafta": "combustible",
+    "subte": "metro",
+    "encargado": "portero",
+    "zaguán": "entrada",
+    "morfamos": "comemos",
+    "escabiar": "beber alcohol",
+    "escabio": "bebidas alcohólicas",
+    "embole": "aburrido",
+    "embolante": "aburrido",
+    "embolar": "aburrir",
+    "manija": "ansiedad",
+    "manijear": "insistir",
+    "colgado": "distraído",
+    "colgada": "distraída",
+    "denso": "pesado",
+    "densa": "pesada",
+    "bajonear": "desanimarse",
+    "hinchapelotas": "molesto",
+    "calentarse": "enojarse",
+    "calentado": "enojado",
+    "manyar": "entender",
+    "manyás": "entendés",
+    "manyas": "entiendes",
+    "junar": "entender",
+    "juné": "entendí",
+    "arrancar": "empezar",
+    "arrancamos": "empezamos",
+    "arrancó": "empezó",
+    "arreglar": "resolver",
+    "arreglás": "resolvés",
+    "arreglamos": "resolvemos",
+    "fijate": "fíjate",
+    "chequear": "verificar",
+    "reventar": "romper",
+    "reventó": "rompió",
+    "coparse": "entusiasmarse",
+    "copó": "entusiasmó",
+    "cagar": "arruinar",
+    "cagada": "error grave",
+    "cagarla": "equivocarse",
+    "garcada": "estafa",
+    "forrada": "abuso",
+    "piola": "genial",
+    "sarpado": "exagerado",
+    "sarpada": "exagerada",
+    "tremendo": "muy grande",
+    "bárbaro": "excelente",
+    "joya": "excelente",
+    "chotísimo": "muy malo",
+    "che": "oye",
+    "vos": "tú",
+    "acá": "aquí",
+    "ey": "oye",
+    "tenés": "tienes",
+    "podés": "puedes",
+    "sabés": "sabes",
+    "querés": "quieres",
+    "sos": "eres",
+    "hacés": "haces",
+    "decís": "dices",
+    "venís": "vienes",
+    "andás": "andas",
+    "comés": "comes",
+    "escribís": "escribes",
+    "vivís": "vives",
+    "entendés": "entiendes",
+    "perdés": "pierdes",
+    "tenías": "tenías",
+    "disculpá": "disculpa",
+    "mirá": "mira",
+    "escuchá": "escucha",
+    "mandame": "envíame",
+    "pasame": "pásame",
+    "decime": "dime",
+    "contame": "cuéntame",
+    "dejame": "déjame",
+    "tomá": "toma",
+    "andá": "ve",
+    "hacé": "haz",
+    "poné": "pon",
+    "decí": "di",
+    "vení": "ven",
+    "esperá": "espera",
+    "llamá": "llama",
+    "apretá": "aprieta",
+    "cerrá": "cierra",
+    "abrí": "abre",
+    "elegí": "elige",
+    "pedí": "pide",
+    "probá": "prueba",
+    "revisá": "revisa",
+    "cargá": "carga",
+    "buscá": "busca",
+    "pagá": "paga",
+    "mandá": "envía",
+    "avisá": "avisa",
+    "decile": "dile",
+    "hacelo": "hazlo",
+    "ponelo": "ponlo",
+    "dejalo": "déjalo",
+    "tomalo": "tómalo",
+    "dale": "dale",
+    "k": "que",
+    "ke": "que",
+    "ns": "no sé",
+    "nse": "no sé",
+    "nose": "no sé",
+    "ntp": "no te preocupes",
+    "qsy": "qué sé yo",
+    "finde": "fin de semana",
+    "mñn": "mañana",
+    "tqm": "te quiero mucho",
+    "sabelo": "tenelo por seguro",
+    "bue": "bueno",
+    "habilitás": "habilitas",
+    "dejás": "dejas",
+    "mandás": "mandas",
+    "ayudás": "ayudas",
+    "avisás": "avisas",
+    "cobrás": "cobras",
+    "cambiás": "cambias",
+    "cancelás": "cancelas",
+    "confirmás": "confirmas",
+    "llamás": "llamas",
+    "pagás": "pagas",
+    "usás": "usas",
+    "necesitás": "necesitas",
+    "esperás": "esperas",
+    "trabajás": "trabajas",
+    "pensás": "piensas",
+    "estudiás": "estudias",
+    "firmás": "firmas",
+    "ganás": "ganas",
+    "gastás": "gastas",
+    "ahorrás": "ahorras",
+    "enviás": "envias",
+    "consultás": "consultas",
+    "reservás": "reservas",
+    "reclamás": "reclamas",
+    "pasás": "pasas",
+    "cruzás": "cruzas",
+    "tocás": "tocas",
+    "bebés": "bebes",
+    "corrés": "corres",
+    "vendés": "vendes",
+    "aprendés": "aprendes",
+    "escribés": "escribes",
+    "vivés": "vives",
+    "recibés": "recibes",
+    "salés": "sales",
+    "transferés": "transferes",
+    "tipo": "hombre",
+    "coger": "mantener relaciones sexuales",
+    "chupar": "beber",
+    "pochoclos": "palomitas de maíz",
+    "pucho": "cigarrillos",
+    "tomátelas": "lárgate",
+    "grasa": "ordinario",
+    "boga": "abogados",
+    "trompa": "boca",
+    "yuta": "policía",
+    "cobani": "policía",
+    "naso": "nariz",
+    "ñapies": "piña al revés",
+    "chorro": "ladrón",
+    "rati": "policía",
+    "garrón": "mala suerte",
+    "garron": "mala suerte",
+    "garrones": "problemas",
+    "garronazo": "gran problema",
+    "porfiado": "terco",
+    "porfiada": "terca",
+    "porfiados": "tercos",
+    "porfiadas": "tercas",
+    "chocho": "muy contento",
+    "chocha": "muy contenta",
+    "chochos": "muy contentos",
+    "chochas": "muy contentas",
+    "barbaro": "excelente",
+    "bárbara": "excelente",
+    "barbara": "excelente",
+    "bárbaros": "excelentes",
+    "barbaros": "excelentes",
+    "bárbaras": "excelentes",
+    "barbaras": "excelentes",
+    "grosa": "excelente",
+    "grosos": "excelentes",
+    "grosas": "excelentes",
+    "mortal": "genial",
+    "buenísimo": "excelente",
+    "buenisimo": "excelente",
+    "buenísima": "excelente",
+    "buenisima": "excelente",
+    "copadísimo": "muy agradable",
+    "copadisimo": "muy agradable",
+    "copadísima": "muy agradable",
+    "copadisima": "muy agradable",
+    "flama": "impecable",
+    "seguís": "sigues",
+    "conseguís": "consigues",
+    "pedís": "pides",
+    "repetís": "repites",
+    "elegís": "eliges",
+    "sentís": "sientes",
+    "mentís": "mientes",
+    "dormís": "duermes",
+    "morís": "mueres",
+    "volvés": "vuelves",
+    "movés": "mueves",
+    "resolvés": "resuelves",
+    "devolvés": "devuelves",
+    "encontrás": "encuentras",
+    "contás": "cuentas",
+    "recordás": "recuerdas",
+    "empezás": "empiezas",
+    "comenzás": "comienzas",
+    "cerrás": "cierras",
+    "jugás": "juegas",
+    "llegás": "llegas",
+    "buscás": "buscas",
+    "sacás": "sacas",
+    "llevás": "llevas",
+    "traés": "traes",
+    "caés": "caes",
+    "leés": "lees",
+    "creés": "crees",
+    "veés": "ves",
+    "oís": "oyes",
+    "salís": "sales",
+    "ponés": "pones",
+    "valés": "vales",
+    "seguí": "sigue",
+    "volvé": "vuelve",
+    "mové": "mueve",
+    "encontrá": "encuentra",
+    "contá": "cuenta",
+    "empezá": "empieza",
+    "pensá": "piensa",
+    "jugá": "juega",
+    "llegá": "llega",
+    "traé": "trae",
+    "leé": "lee",
+    "salí": "sal",
+    "haceme": "hazme",
+    "poneme": "ponme",
+    "traeme": "tráeme",
+    "llevame": "llévame",
+    "llamame": "llámame",
+    "avisame": "avísame",
+    "esperame": "espérame",
+    "buscame": "búscame",
+    "acordate": "acuérdate",
+    "cuidate": "cuídate",
+    "portate": "pórtate",
+    "callate": "cállate",
+    "sentate": "siéntate",
+    "levantate": "levántate",
+    "apurate": "apúrate",
+    "olvidate": "olvídate",
+    "quedate": "quédate",
+    "piolas": "geniales",
+    "ponele": "supongamos"
+  },
+  "frases": [
+    [
+      "\\best[aá]\\s+piola\\b",
+      "está genial"
+    ],
+    [
+      "\\best[aá]n\\s+piolas\\b",
+      "están geniales"
+    ],
+    [
+      "\\bqu[eé]\\s+piola\\b",
+      "qué genial"
+    ],
+    [
+      "\\bre\\s+piola\\b",
+      "muy genial"
+    ],
+    [
+      "\\bun\\s+buen\\s+quilombo\\b",
+      "un gran desorden"
+    ],
+    [
+      "\\bbuen\\s+quilombo\\b",
+      "gran desorden"
+    ],
+    [
+      "\\bqu[eé]\\s+quilombo\\b",
+      "qué desorden"
+    ],
+    [
+      "\\bun\\s+quilombo\\b",
+      "un desorden"
+    ],
+    [
+      "\\bmandar\\s+fruta\\b",
+      "inventar sin saber"
+    ],
+    [
+      "\\bmandando\\s+fruta\\b",
+      "inventando sin saber"
+    ],
+    [
+      "\\bvos\\s+fum[aá]\\b",
+      "no te preocupes"
+    ],
+    [
+      "\\bfum[aá]la\\b",
+      "olvidate"
+    ],
+    [
+      "\\bqu[eé]\\s+onda\\b",
+      "qué tal"
+    ],
+    [
+      "\\bmango\\s+de\\s+la\\s+olla\\b",
+      "mango de la olla"
+    ],
+    [
+      "\\bmango\\s+del\\s+cuchillo\\b",
+      "mango del cuchillo"
+    ],
+    [
+      "\\bcuchara\\s+de\\s+plata\\b",
+      "cuchara de plata"
+    ],
+    [
+      "\\bmedalla\\s+de\\s+plata\\b",
+      "medalla de plata"
+    ],
+    [
+      "\\bmoneda\\s+de\\s+plata\\b",
+      "moneda de plata"
+    ],
+    [
+      "\\bminas\\s+de\\s+carb[oó]n\\b",
+      "minas de carbón"
+    ],
+    [
+      "\\bmina\\s+de\\s+carb[oó]n\\b",
+      "mina de carbón"
+    ],
+    [
+      "\\bminas\\s+de\\s+oro\\b",
+      "minas de oro"
+    ],
+    [
+      "\\bmina\\s+de\\s+oro\\b",
+      "mina de oro"
+    ],
+    [
+      "\\bchorro\\s+de\\s+agua\\b",
+      "chorro de agua"
+    ],
+    [
+      "\\btacho\\s+de\\s+basura\\b",
+      "tacho de basura"
+    ],
+    [
+      "\\bca[ñn]as\\s+de\\s+pescar\\b",
+      "cañas de pescar"
+    ],
+    [
+      "\\bca[ñn]a\\s+de\\s+pescar\\b",
+      "caña de pescar"
+    ],
+    [
+      "\\bca[ñn]as\\s+de\\s+az[uú]car\\b",
+      "cañas de azúcar"
+    ],
+    [
+      "\\bca[ñn]a\\s+de\\s+az[uú]car\\b",
+      "caña de azúcar"
+    ],
+    [
+      "\\banillo\\s+de\\s+plata\\b",
+      "anillo de plata"
+    ],
+    [
+      "\\bcadena\\s+de\\s+plata\\b",
+      "cadena de plata"
+    ],
+    [
+      "\\baros?\\s+de\\s+plata\\b",
+      "aros de plata"
+    ],
+    [
+      "\\bpulsera\\s+de\\s+plata\\b",
+      "pulsera de plata"
+    ],
+    [
+      "\\bcubiertos\\s+de\\s+plata\\b",
+      "cubiertos de plata"
+    ],
+    [
+      "\\bvajilla\\s+de\\s+plata\\b",
+      "vajilla de plata"
+    ],
+    [
+      "\\bes\\s+de\\s+plata\\b",
+      "es de plata"
+    ],
+    [
+      "\\bmar\\s+del\\s+plata\\b",
+      "Mar del Plata"
+    ],
+    [
+      "\\br[ií]o\\s+de\\s+la\\s+plata\\b",
+      "Río de la Plata"
+    ],
+    [
+      "\\best[aá]s\\s+frito\\b",
+      "estás perdido"
+    ],
+    [
+      "\\best[aá]s\\s+frita\\b",
+      "estás perdida"
+    ],
+    [
+      "\\bestoy\\s+frito\\b",
+      "estoy perdido"
+    ],
+    [
+      "\\bestoy\\s+frita\\b",
+      "estoy perdida"
+    ],
+    [
+      "\\best[aá]\\s+frito\\b",
+      "está perdido"
+    ],
+    [
+      "\\best[aá]\\s+frita\\b",
+      "está perdida"
+    ],
+    [
+      "\\bestamos\\s+fritos\\b",
+      "estamos perdidos"
+    ],
+    [
+      "\\bestamos\\s+fritas\\b",
+      "estamos perdidas"
+    ],
+    [
+      "\\bmucha\\s+guita\\b",
+      "mucho dinero"
+    ],
+    [
+      "\\bpoca\\s+guita\\b",
+      "poco dinero"
+    ],
+    [
+      "\\btanta\\s+guita\\b",
+      "tanto dinero"
+    ],
+    [
+      "\\bninguna\\s+guita\\b",
+      "ningún dinero"
+    ],
+    [
+      "\\bcu[aá]nta\\s+guita\\b",
+      "cuánto dinero"
+    ],
+    [
+      "\\bqu[eé]\\s+zarpad[oa]\\b",
+      "qué genial"
+    ],
+    [
+      "\\bre\\s+zarpad[oa]\\b",
+      "muy genial"
+    ],
+    [
+      "\\best[aá]\\s+zarpad[oa]\\b",
+      "está espectacular"
+    ],
+    [
+      "\\bson\\s+zarpad[oa]s\\b",
+      "son geniales"
+    ],
+    [
+      "\\btengo\\s+(?:una\\s+)?lija\\s+b[aá]rbara\\b",
+      "tengo un hambre enorme"
+    ],
+    [
+      "\\b(?:una\\s+)?lija\\s+b[aá]rbara\\b",
+      "un hambre enorme"
+    ],
+    [
+      "\\bun\\s+hambre\\s+b[aá]rbara\\b",
+      "un hambre enorme"
+    ],
+    [
+      "\\buna\\s+sed\\s+b[aá]rbara\\b",
+      "una sed enorme"
+    ],
+    [
+      "\\bcalor\\s+b[aá]rbaro\\b",
+      "calor extremo"
+    ],
+    [
+      "\\bfr[ií]o\\s+b[aá]rbaro\\b",
+      "frío extremo"
+    ],
+    [
+      "\\bviento\\s+b[aá]rbaro\\b",
+      "viento muy fuerte"
+    ],
+    [
+      "\\besfuerzo\\s+b[aá]rbaro\\b",
+      "esfuerzo enorme"
+    ],
+    [
+      "\\bsuerte\\s+b[aá]rbara\\b",
+      "suerte enorme"
+    ],
+    [
+      "\\bmiedo\\s+b[aá]rbaro\\b",
+      "miedo enorme"
+    ],
+    [
+      "\\bverg[uü]enza\\s+b[aá]rbara\\b",
+      "vergüenza enorme"
+    ],
+    [
+      "\\bdolor\\s+b[aá]rbaro\\b",
+      "dolor muy fuerte"
+    ],
+    [
+      "\\brabia\\s+b[aá]rbara\\b",
+      "rabia enorme"
+    ],
+    [
+      "\\bbronca\\s+b[aá]rbara\\b",
+      "enojo enorme"
+    ],
+    [
+      "\\bqu[eé]\\s+garr[oó]n\\b",
+      "qué mala suerte"
+    ],
+    [
+      "\\bun\\s+garr[oó]n\\b",
+      "una situación muy mala"
+    ],
+    [
+      "\\bfaltan?\\s+cinco\\s+para\\s+el\\s+peso\\b",
+      "falta muy poco"
+    ],
+    [
+      "\\bde\\s+queru[sz]a\\b",
+      "a escondidas"
+    ],
+    [
+      "\\btengo\\s+(?:una\\s+)?lija\\b",
+      "tengo mucha hambre"
+    ],
+    [
+      "\\bten[eé]s\\s+(?:una\\s+)?lija\\b",
+      "tenés mucha hambre"
+    ],
+    [
+      "\\btiene\\s+(?:una\\s+)?lija\\b",
+      "tiene mucha hambre"
+    ],
+    [
+      "\\btenemos\\s+(?:una\\s+)?lija\\b",
+      "tenemos mucha hambre"
+    ],
+    [
+      "\\bqu[eé]\\s+lija\\s+que\\s+tengo\\b",
+      "qué hambre que tengo"
+    ],
+    [
+      "\\bme\\s+descans[oó]\\b",
+      "se burló de mí"
+    ],
+    [
+      "\\bte\\s+descans[oó]\\b",
+      "se burló de vos"
+    ],
+    [
+      "\\blo\\s+descans[oó]\\b",
+      "se burló de él"
+    ],
+    [
+      "\\bla\\s+descans[oó]\\b",
+      "se burló de ella"
+    ],
+    [
+      "\\bnos\\s+descans[oó]\\b",
+      "se burló de nosotros"
+    ],
+    [
+      "\\bme\\s+est[aá]s\\s+descansando\\b",
+      "te estás burlando de mí"
+    ],
+    [
+      "\\bme\\s+est[aá]\\s+descansando\\b",
+      "se está burlando de mí"
+    ],
+    [
+      "\\bno\\s+me\\s+descanses\\b",
+      "no te burles de mí"
+    ],
+    [
+      "\\bme\\s+com[ií]\\s+el\\s+amague\\b",
+      "me dejé engañar"
+    ],
+    [
+      "\\bte\\s+comiste\\s+el\\s+amague\\b",
+      "te dejaste engañar"
+    ],
+    [
+      "\\bse\\s+comi[oó]\\s+el\\s+amague\\b",
+      "se dejó engañar"
+    ],
+    [
+      "\\bme\\s+dej[oó]\\s+de\\s+cara\\b",
+      "me dejó sorprendido"
+    ],
+    [
+      "\\bqued[eé]\\s+de\\s+cara\\b",
+      "quedé sorprendido"
+    ],
+    [
+      "\\bqued[oó]\\s+de\\s+cara\\b",
+      "quedó sorprendido"
+    ],
+    [
+      "\\bir\\s+a\\s+los\\s+chapazos\\b",
+      "ir muy rápido"
+    ],
+    [
+      "\\bven[ií]a\\s+a\\s+los\\s+chapazos\\b",
+      "venía muy rápido"
+    ],
+    [
+      "\\bse\\s+fue\\s+al\\s+pasto\\b",
+      "se excedió demasiado"
+    ],
+    [
+      "\\bte\\s+fuiste\\s+al\\s+pasto\\b",
+      "te excediste demasiado"
+    ],
+    [
+      "\\bme\\s+fui\\s+al\\s+pasto\\b",
+      "me excedí demasiado"
+    ],
+    [
+      "\\bqu[eé]\\s+flash\\b",
+      "qué locura"
+    ],
+    [
+      "\\bflashar\\s+colores\\b",
+      "imaginar cosas raras"
+    ],
+    [
+      "\\bno\\s+da\\s+puntada\\s+sin\\s+hilo\\b",
+      "no hace nada sin interés"
+    ],
+    [
+      "\\bno\\s+tiene\\s+gollete\\b",
+      "no tiene sentido"
+    ],
+    [
+      "\\bquedarnos\\s+cortos\\s+de\\s+(?:guita|plata)\\b",
+      "quedarnos con poco dinero"
+    ],
+    [
+      "\\bnos\\s+quedamos\\s+cortos\\s+de\\s+(?:guita|plata)\\b",
+      "nos quedamos con poco dinero"
+    ],
+    [
+      "\\bme\\s+qued[eé]\\s+cort[oa]\\s+de\\s+(?:guita|plata)\\b",
+      "me quedé con poco dinero"
+    ],
+    [
+      "\\bse\\s+qued[oó]\\s+cort[oa]\\s+de\\s+(?:guita|plata)\\b",
+      "se quedó con poco dinero"
+    ],
+    [
+      "\\bquedarse\\s+cort[oa]\\b",
+      "no alcanzar"
+    ],
+    [
+      "\\bfaltan\\s+cinco\\s+para\\s+el\\s+peso\\b",
+      "falta muy poco"
+    ],
+    [
+      "\\bfalta\\s+cinco\\s+para\\s+el\\s+peso\\b",
+      "falta muy poco"
+    ],
+    [
+      "\\bno\\s+llegar\\s+a\\s+fin\\s+de\\s+mes\\b",
+      "no alcanzar el dinero hasta fin de mes"
+    ],
+    [
+      "\\bno\\s+llego\\s+a\\s+fin\\s+de\\s+mes\\b",
+      "no me alcanza el dinero hasta fin de mes"
+    ],
+    [
+      "\\bestar\\s+seco\\b",
+      "no tener dinero"
+    ],
+    [
+      "\\bestoy\\s+sec[oa]\\b",
+      "no tengo dinero"
+    ],
+    [
+      "\\bquedarse\\s+en\\s+pampa\\s+y\\s+la\\s+v[ií]a\\b",
+      "quedarse sin nada"
+    ],
+    [
+      "\\bme\\s+qued[eé]\\s+en\\s+pampa\\s+y\\s+la\\s+v[ií]a\\b",
+      "me quedé sin nada"
+    ],
+    [
+      "\\batar\\s+con\\s+alambre\\b",
+      "arreglar de forma provisoria"
+    ],
+    [
+      "\\batado\\s+con\\s+alambre\\b",
+      "arreglado de forma provisoria"
+    ],
+    [
+      "\\bhacerse\\s+humo\\b",
+      "desaparecer"
+    ],
+    [
+      "\\bse\\s+hizo\\s+humo\\b",
+      "desapareció"
+    ],
+    [
+      "\\bse\\s+hacen\\s+humo\\b",
+      "desaparecen"
+    ],
+    [
+      "\\bme\\s+hago\\s+humo\\b",
+      "me voy sin avisar"
+    ],
+    [
+      "\\bestar\\s+en\\s+babia\\b",
+      "estar distraído"
+    ],
+    [
+      "\\best[aá]\\s+en\\s+babia\\b",
+      "está distraído"
+    ],
+    [
+      "\\best[aá]s\\s+en\\s+babia\\b",
+      "estás distraído"
+    ],
+    [
+      "\\bestoy\\s+en\\s+babia\\b",
+      "estoy distraído"
+    ],
+    [
+      "\\bestaba\\s+en\\s+babia\\b",
+      "estaba distraído"
+    ],
+    [
+      "\\bquedar\\s+pagando\\b",
+      "quedar descolocado"
+    ],
+    [
+      "\\bqued[oó]\\s+pagando\\b",
+      "quedó descolocado"
+    ],
+    [
+      "\\bqued[eé]\\s+pagando\\b",
+      "quedé descolocado"
+    ],
+    [
+      "\\bquedaste\\s+pagando\\b",
+      "quedaste descolocado"
+    ],
+    [
+      "\\bhacerse\\s+el\\s+oso\\b",
+      "disimular"
+    ],
+    [
+      "\\bse\\s+hace\\s+el\\s+oso\\b",
+      "disimula"
+    ],
+    [
+      "\\bse\\s+hizo\\s+el\\s+oso\\b",
+      "disimuló"
+    ],
+    [
+      "\\bvivir\\s+en\\s+un\\s+termo\\b",
+      "ignorar lo que pasa"
+    ],
+    [
+      "\\bvive\\s+en\\s+un\\s+termo\\b",
+      "ignora lo que pasa"
+    ],
+    [
+      "\\bviv[ií]s\\s+en\\s+un\\s+termo\\b",
+      "ignorás lo que pasa"
+    ],
+    [
+      "\\birse\\s+al\\s+mazo\\b",
+      "darse por vencido"
+    ],
+    [
+      "\\bse\\s+fue\\s+al\\s+mazo\\b",
+      "se dio por vencido"
+    ],
+    [
+      "\\bme\\s+fui\\s+al\\s+mazo\\b",
+      "me di por vencido"
+    ],
+    [
+      "\\bcortar\\s+el\\s+rostro\\b",
+      "rechazar"
+    ],
+    [
+      "\\ble\\s+cort[oó]\\s+el\\s+rostro\\b",
+      "lo rechazó"
+    ],
+    [
+      "\\bme\\s+cort[oó]\\s+el\\s+rostro\\b",
+      "me rechazó"
+    ],
+    [
+      "\\bsacar\\s+el\\s+cuero\\b",
+      "criticar a escondidas"
+    ],
+    [
+      "\\ble\\s+sacan\\s+el\\s+cuero\\b",
+      "lo critican a escondidas"
+    ],
+    [
+      "\\bsacando\\s+el\\s+cuero\\b",
+      "criticando a escondidas"
+    ],
+    [
+      "\\bno\\s+dar\\s+pie\\s+con\\s+bola\\b",
+      "no acertar nada"
+    ],
+    [
+      "\\bno\\s+da\\s+pie\\s+con\\s+bola\\b",
+      "no acierta nada"
+    ],
+    [
+      "\\bno\\s+doy\\s+pie\\s+con\\s+bola\\b",
+      "no acierto nada"
+    ],
+    [
+      "\\bremar\\s+en\\s+dulce\\s+de\\s+leche\\b",
+      "esforzarse sin avanzar"
+    ],
+    [
+      "\\bremando\\s+en\\s+dulce\\s+de\\s+leche\\b",
+      "esforzándose sin avanzar"
+    ],
+    [
+      "\\bponer\\s+las\\s+manos\\s+en\\s+el\\s+fuego\\b",
+      "confiar plenamente"
+    ],
+    [
+      "\\bpongo\\s+las\\s+manos\\s+en\\s+el\\s+fuego\\b",
+      "confío plenamente"
+    ],
+    [
+      "\\bpintad[oa]\\s+al\\s+[oó]leo\\b",
+      "ignorado por completo"
+    ],
+    [
+      "\\bagarrar\\s+viaje\\b",
+      "aceptar enseguida"
+    ],
+    [
+      "\\bagarr[oó]\\s+viaje\\b",
+      "aceptó enseguida"
+    ],
+    [
+      "\\bagarr[eé]\\s+viaje\\b",
+      "acepté enseguida"
+    ],
+    [
+      "\\best[aá]s\\s+frit[oa]\\b",
+      "estás en problemas"
+    ],
+    [
+      "\\bestoy\\s+frit[oa]\\b",
+      "estoy en problemas"
+    ],
+    [
+      "\\best[aá]\\s+frit[oa]\\b",
+      "está en problemas"
+    ],
+    [
+      "\\bestamos\\s+frit[oa]s\\b",
+      "estamos en problemas"
+    ],
+    [
+      "\\bhacerse\\s+el\\s+sota\\b",
+      "hacerse el distraído"
+    ],
+    [
+      "\\bse\\s+hace\\s+el\\s+sota\\b",
+      "se hace el distraído"
+    ],
+    [
+      "\\bno\\s+caza\\s+una\\b",
+      "no entiende nada"
+    ],
+    [
+      "\\bno\\s+cazo\\s+una\\b",
+      "no entiendo nada"
+    ],
+    [
+      "\\bme\\s+cay[oó]\\s+la\\s+ficha\\b",
+      "lo entendí recién ahora"
+    ],
+    [
+      "\\bte\\s+cay[oó]\\s+la\\s+ficha\\b",
+      "lo entendiste recién ahora"
+    ],
+    [
+      "\\bpasarse\\s+de\\s+rosca\\b",
+      "exagerar mucho"
+    ],
+    [
+      "\\bse\\s+pas[oó]\\s+de\\s+rosca\\b",
+      "exageró mucho"
+    ],
+    [
+      "\\bestar\\s+pintad[oa]\\b",
+      "no ser tenido en cuenta"
+    ],
+    [
+      "\\bestoy\\s+pintad[oa]\\b",
+      "no me tienen en cuenta"
+    ],
+    [
+      "\\btirar\\s+la\\s+toalla\\b",
+      "rendirse"
+    ],
+    [
+      "\\btir[oó]\\s+la\\s+toalla\\b",
+      "se rindió"
+    ],
+    [
+      "\\bmeter\\s+la\\s+pata\\b",
+      "cometer un error"
+    ],
+    [
+      "\\bmet[ií]\\s+la\\s+pata\\b",
+      "cometí un error"
+    ],
+    [
+      "\\bmeti[oó]\\s+la\\s+pata\\b",
+      "cometió un error"
+    ],
+    [
+      "\\bponerse\\s+las\\s+pilas\\b",
+      "esforzarse más"
+    ],
+    [
+      "\\bponete\\s+las\\s+pilas\\b",
+      "esforzate más"
+    ],
+    [
+      "\\bse\\s+puso\\s+las\\s+pilas\\b",
+      "se esforzó más"
+    ],
+    [
+      "\\bdar\\s+vuelta\\s+la\\s+p[aá]gina\\b",
+      "seguir adelante"
+    ],
+    [
+      "\\bhacer\\s+la\\s+vista\\s+gorda\\b",
+      "fingir no ver algo"
+    ],
+    [
+      "\\bes\\s+un\\s+papa\\s*frita\\b",
+      "es un tonto"
+    ],
+    [
+      "\\bsos\\s+un\\s+papa\\s*frita\\b",
+      "sos un tonto"
+    ],
+    [
+      "\\b(?:un|una)\\s+papa\\s*frita\\b",
+      "un tonto"
+    ],
+    [
+      "\\bromp(?:er|e|en)\\s+los\\s+quinotos\\b",
+      "molestan mucho"
+    ],
+    [
+      "\\btir(?:ar|a|ó|aba)\\s+manteca\\s+al\\s+techo\\b",
+      "gastó dinero sin medida"
+    ],
+    [
+      "\\bun\\s+ñoqui\\s+del\\s+estado\\b",
+      "un empleado que no trabaja"
+    ],
+    [
+      "\\bla\\s+frutilla\\s+del\\s+postre\\b",
+      "el toque final"
+    ],
+    [
+      "\\bla\\s+verdad\\s+de\\s+la\\s+milanga\\b",
+      "la pura verdad"
+    ],
+    [
+      "\\bchupate\\s+esa\\s+mandarina\\b",
+      "sorprendete con eso"
+    ],
+    [
+      "\\bchocolate\\s+por\\s+la\\s+noticia\\b",
+      "eso ya se sabía"
+    ],
+    [
+      "\\bmand(?:ar|aste|ó|aron)\\s+a\\s+fre[ií]r\\s+churros\\b",
+      "echar"
+    ],
+    [
+      "\\ble\\s+falt(?:a|aba)\\s+un\\s+golpe\\s+de\\s+horno\\b",
+      "le falta madurar"
+    ],
+    [
+      "\\bbancarse\\s+la\\s+pelusa\\b",
+      "aceptar las consecuencias"
+    ],
+    [
+      "\\bajo\\s+y\\s+agua\\b",
+      "a aguantarse"
+    ],
+    [
+      "\\bes\\s+un\\s+perejil\\b",
+      "es un ingenuo"
+    ],
+    [
+      "\\bsos\\s+un\\s+perejil\\b",
+      "sos un ingenuo"
+    ],
+    [
+      "\\b(?:un|una)\\s+perejil\\b",
+      "un ingenuo"
+    ],
+    [
+      "\\bes\\s+un\\s+salame\\b",
+      "es un tonto"
+    ],
+    [
+      "\\bsos\\s+un\\s+salame\\b",
+      "sos un tonto"
+    ],
+    [
+      "\\b(?:un|una)\\s+salame\\b",
+      "un tonto"
+    ],
+    [
+      "\\b(?:qué|que)\\s+salame\\b",
+      "qué tonto"
+    ],
+    [
+      "\\bes\\s+un\\s+banana\\b",
+      "es muy creído"
+    ],
+    [
+      "\\bsos\\s+un\\s+banana\\b",
+      "sos muy creído"
+    ],
+    [
+      "\\bse\\s+hace\\s+el\\s+banana\\b",
+      "se hace el creído"
+    ],
+    [
+      "\\b(?:muy|re)\\s+banana\\b",
+      "muy creído"
+    ],
+    [
+      "\\bun\\s+banana\\b",
+      "un creído"
+    ],
+    [
+      "\\bes\\s+un\\s+churro\\b",
+      "es muy atractivo"
+    ],
+    [
+      "\\b(?:qué|que)\\s+churro\\b",
+      "qué atractivo"
+    ],
+    [
+      "\\bes\\s+un\\s+bomb[oó]n\\b",
+      "es muy atractivo"
+    ],
+    [
+      "\\b(?:qué|que)\\s+bomb[oó]n\\b",
+      "qué atractivo"
+    ],
+    [
+      "\\bes\\s+un\\s+caramelo\\b",
+      "es muy dulce"
+    ],
+    [
+      "\\b(?:qué|que)\\s+caramelo\\b",
+      "qué dulce"
+    ],
+    [
+      "\\bese\\s+zapallo\\b",
+      "ese tonto"
+    ],
+    [
+      "\\beste\\s+zapallo\\b",
+      "este tonto"
+    ],
+    [
+      "\\bes\\s+un\\s+zapallo\\b",
+      "es un tonto"
+    ],
+    [
+      "\\bsos\\s+un\\s+zapallo\\b",
+      "sos un tonto"
+    ],
+    [
+      "\\bun\\s+zapallo\\b",
+      "un tonto"
+    ],
+    [
+      "\\b(?:un\\s+lugar|re|muy|est[aá])\\s+salado\\b",
+      "muy caro"
+    ],
+    [
+      "\\b(?:estaba|est[aá]|anda)\\s+dulce\\b",
+      "tenía mucho dinero"
+    ],
+    [
+      "\\b(?:le\\s+dio|tener|tiene)\\s+batata\\b",
+      "tiene miedo"
+    ],
+    [
+      "\\bese\\s+durazno\\b",
+      "ese lento para entender"
+    ],
+    [
+      "\\beste\\s+durazno\\b",
+      "este lento para entender"
+    ],
+    [
+      "\\bes\\s+un\\s+durazno\\b",
+      "es un lento para entender"
+    ],
+    [
+      "\\bsos\\s+un\\s+durazno\\b",
+      "sos un lento para entender"
+    ],
+    [
+      "\\bun\\s+durazno\\b",
+      "un lento para entender"
+    ],
+    [
+      "\\bMe\\s+las\\s+tomo\\b",
+      "me voy"
+    ],
+    [
+      "\\bMe\\s+las\\s+pico\\b",
+      "irse rápido"
+    ],
+    [
+      "\\bUna\\s+bocha\\b",
+      "mucho de algo"
+    ],
+    [
+      "\\bLa\\s+mosca\\b",
+      "dinero"
+    ],
+    [
+      "\\bUna\\s+luca\\b",
+      "mil pesos"
+    ],
+    [
+      "\\bUn\\s+palo\\b",
+      "millón de pesos"
+    ],
+    [
+      "\\bUna\\s+gamba\\b",
+      "cien pesos argentinos"
+    ],
+    [
+      "\\bViejo/a\\b",
+      "padres"
+    ],
+    [
+      "\\bHacer\\s+la\\s+gamba\\b",
+      "acompañar o apoyar"
+    ],
+    [
+      "\\bSaltar\\s+la\\s+ficha\\b",
+      "quedar expuesto o ser descubierto"
+    ],
+    [
+      "\\bechar\\s+una\\s+cana\\s+al\\s+aire\\b",
+      "darse un gusto"
+    ],
+    [
+      "\\becharse\\s+una\\s+cana\\s+al\\s+aire\\b",
+      "darse un gusto"
+    ],
+    [
+      "\\bme\\s+eché\\s+una\\s+cana\\s+al\\s+aire\\b",
+      "me di un gusto"
+    ],
+    [
+      "\\bse\\s+echó\\s+una\\s+cana\\s+al\\s+aire\\b",
+      "se dio un gusto"
+    ],
+    [
+      "\\bsalió\\s+a\\s+echar\\s+una\\s+cana\\s+al\\s+aire\\b",
+      "salió a darse un gusto"
+    ],
+    [
+      "\\bsacar\\s+canas\\s+verdes\\b",
+      "preocupar mucho"
+    ],
+    [
+      "\\bsacando\\s+canas\\s+verdes\\b",
+      "preocupando mucho"
+    ],
+    [
+      "\\bme\\s+sacó\\s+canas\\s+verdes\\b",
+      "me preocupó mucho"
+    ],
+    [
+      "\\bme\\s+saca\\s+canas\\s+verdes\\b",
+      "me preocupa mucho"
+    ],
+    [
+      "\\bme\\s+va\\s+a\\s+sacar\\s+canas\\s+verdes\\b",
+      "me va a preocupar mucho"
+    ],
+    [
+      "\\bnos\\s+saca\\s+canas\\s+verdes\\b",
+      "nos preocupa mucho"
+    ],
+    [
+      "\\bpeinar\\s+canas\\b",
+      "tener experiencia"
+    ],
+    [
+      "\\bpeina\\s+canas\\b",
+      "tiene experiencia"
+    ],
+    [
+      "\\bpeinaba\\s+canas\\b",
+      "tenía experiencia"
+    ],
+    [
+      "\\bpeinando\\s+canas\\b",
+      "teniendo experiencia"
+    ],
+    [
+      "\\bviene\\s+la\\s+cana\\b",
+      "viene la policía"
+    ],
+    [
+      "\\bvino\\s+la\\s+cana\\b",
+      "vino la policía"
+    ],
+    [
+      "\\bir\\s+en\\s+cana\\b",
+      "terminar preso"
+    ],
+    [
+      "\\bvan\\s+a\\s+terminar\\s+en\\s+cana\\b",
+      "van a terminar presos"
+    ],
+    [
+      "\\bterminó\\s+en\\s+cana\\b",
+      "terminó preso"
+    ],
+    [
+      "\\bcaer\\s+en\\s+cana\\b",
+      "terminar preso"
+    ],
+    [
+      "\\bcayó\\s+en\\s+cana\\b",
+      "terminó preso"
+    ],
+    [
+      "\\bmeter\\s+en\\s+cana\\b",
+      "encarcelar"
+    ],
+    [
+      "\\bmetió\\s+en\\s+cana\\b",
+      "encarceló"
+    ],
+    [
+      "\\bmetieron\\s+en\\s+cana\\b",
+      "encarcelaron"
+    ],
+    [
+      "\\bun\\s+cana\\b",
+      "un policía"
+    ],
+    [
+      "\\bunos\\s+canas\\b",
+      "unos policías"
+    ],
+    [
+      "\\bmeses\\s+de\\s+cana\\b",
+      "meses de cárcel"
+    ],
+    [
+      "\\baños\\s+de\\s+cana\\b",
+      "años de cárcel"
+    ],
+    [
+      "\\btoda\\s+la\\s+guita\\b",
+      "todo el dinero"
+    ],
+    [
+      "\\b(?:la|una|esa|esta)\\s+guita\\b",
+      "el dinero"
+    ],
+    [
+      "\\bmi\\s+guita\\b",
+      "mi dinero"
+    ],
+    [
+      "\\blas\\s+guitas\\b",
+      "el dinero"
+    ],
+    [
+      "\\b(?:el|un)\\s+morfi\\b",
+      "la comida"
+    ],
+    [
+      "\\bmi\\s+morfi\\b",
+      "mi comida"
+    ],
+    [
+      "\\bdel\\s+morfi\\b",
+      "de la comida"
+    ],
+    [
+      "\\bal\\s+morfi\\b",
+      "a la comida"
+    ],
+    [
+      "\\bnadie\\s+me\\s+(?:da|dio|dan|dieron)\\s+bola\\b",
+      "nadie me atiende"
+    ],
+    [
+      "\\bno\\s+me\\s+(?:da|dan|dio|dieron)\\s+bola\\b",
+      "no me atienden"
+    ],
+    [
+      "\\bno\\s+le\\s+(?:dan|dio|dieron)\\s+bola\\b",
+      "no le prestan atención"
+    ],
+    [
+      "\\bhace\\s+(?:banda|bocha|una\\s+banda|mil\\s+años)\\b",
+      "hace mucho tiempo"
+    ],
+    [
+      "\\bdesde\\s+hace\\s+banda\\b",
+      "desde hace mucho tiempo"
+    ],
+    [
+      "\\bal\\s+toque\\b",
+      "enseguida"
+    ],
+    [
+      "\\ben\\s+un\\s+toque\\b",
+      "en un momento"
+    ],
+    [
+      "\\bde\\s+una\\b",
+      "sin dudarlo"
+    ],
+    [
+      "\\bni\\s+en\\s+pedo\\b",
+      "de ninguna manera"
+    ],
+    [
+      "\\bni\\s+ahí\\b",
+      "de ninguna manera"
+    ],
+    [
+      "\\ba\\s+full\\b",
+      "a fondo"
+    ],
+    [
+      "\\bde\\s+onda\\b",
+      "por favor"
+    ],
+    [
+      "\\bposta\\b",
+      "de verdad"
+    ],
+    [
+      "\\bla\\s+verdad\\s+que\\b",
+      "sinceramente"
+    ],
+    [
+      "\\bme\\s+re\\s+colgu[eé]\\b",
+      "me olvidé"
+    ],
+    [
+      "\\bme\\s+colgu[eé]\\b",
+      "me olvidé"
+    ],
+    [
+      "\\bnos\\s+colgamos\\b",
+      "nos olvidamos"
+    ],
+    [
+      "\\bno\\s+anda\\s+ni\\s+para\\s+atr[aá]s\\b",
+      "no funciona para nada"
+    ],
+    [
+      "\\bno\\s+me\\s+cierra\\b",
+      "no me convence"
+    ],
+    [
+      "\\bme\\s+qued[oó]\\s+el\\s+mate\\b",
+      "no entendí nada"
+    ],
+    [
+      "\\bme\\s+est[aá]s\\s+carajeando\\b",
+      "me estás faltando el respeto"
+    ],
+    [
+      "\\bno\\s+da\\s+m[aá]s\\b",
+      "es el colmo"
+    ],
+    [
+      "\\bme\\s+tiene\\s+podrido\\b",
+      "me tiene harto"
+    ],
+    [
+      "\\bestoy\\s+podrido\\b",
+      "estoy harto"
+    ],
+    [
+      "\\bme\\s+tiene\\s+harto\\b",
+      "me tiene cansado"
+    ],
+    [
+      "\\bme\\s+re\\s+gust[oó]\\b",
+      "me gustó mucho"
+    ],
+    [
+      "\\bme\\s+re\\s+encant[oó]\\b",
+      "me encantó mucho"
+    ],
+    [
+      "\\b(?:un|dos|tres)\\s+palos\\b",
+      "millones"
+    ],
+    [
+      "\\btodas\\s+las\\s+lucas\\b",
+      "todo el dinero"
+    ],
+    [
+      "\\bmuchas\\s+lucas\\b",
+      "mucho dinero"
+    ],
+    [
+      "\\bpocas\\s+lucas\\b",
+      "poco dinero"
+    ],
+    [
+      "\\btantas\\s+lucas\\b",
+      "tanto dinero"
+    ],
+    [
+      "\\blas\\s+lucas\\s+no\\s+alcanzan\\b",
+      "el dinero no alcanza"
+    ],
+    [
+      "\\blas\\s+lucas\\b",
+      "el dinero"
+    ],
+    [
+      "\\bsin\\s+un\\s+mango\\b",
+      "sin nada de dinero"
+    ],
+    [
+      "\\bno\\s+(tengo|tenés|tenes|tiene|tenemos|tienen)\\s+(?:ni\\s+)?un\\s+mango\\b",
+      "no \\1 nada de dinero"
+    ],
+    [
+      "\\bno\\s+me\\s+queda\\s+un\\s+mango\\b",
+      "no me queda nada de dinero"
+    ],
+    [
+      "\\b(?:vale|sale|cuesta)\\s+un\\s+mango\\b",
+      "cuesta muy poco"
+    ],
+    [
+      "\\bno\\s+vale\\s+(?:ni\\s+)?dos\\s+mangos\\b",
+      "no vale nada"
+    ],
+    [
+      "\\bpor\\s+un\\s+mango\\b",
+      "por muy poco dinero"
+    ],
+    [
+      "\\btoda\\s+la\\s+plata\\b",
+      "todo el dinero"
+    ],
+    [
+      "\\bmucha\\s+plata\\b",
+      "mucho dinero"
+    ],
+    [
+      "\\bpoca\\s+plata\\b",
+      "poco dinero"
+    ],
+    [
+      "\\btanta\\s+plata\\b",
+      "tanto dinero"
+    ],
+    [
+      "\\bninguna\\s+plata\\b",
+      "nada de dinero"
+    ],
+    [
+      "\\bcu[aá]nta\\s+plata\\b",
+      "cuánto dinero"
+    ],
+    [
+      "\\bde\\s+la\\s+plata\\b",
+      "del dinero"
+    ],
+    [
+      "\\ba\\s+la\\s+plata\\b",
+      "al dinero"
+    ],
+    [
+      "\\bcon\\s+la\\s+plata\\b",
+      "con el dinero"
+    ],
+    [
+      "\\ben\\s+la\\s+plata\\b",
+      "en el dinero"
+    ],
+    [
+      "\\b(?:la|una|esa|esta)\\s+plata\\b",
+      "el dinero"
+    ],
+    [
+      "\\bse\\s+lastim[oó]\\s+la\\s+cana\\b",
+      "se lastimó la pierna"
+    ],
+    [
+      "\\bse\\s+rompi[oó]\\s+la\\s+cana\\b",
+      "se rompió la pierna"
+    ],
+    [
+      "\\bse\\s+golpe[oó]\\s+la\\s+cana\\b",
+      "se golpeó la pierna"
+    ],
+    [
+      "\\b(me|le|te)\\s+duele\\s+la\\s+cana\\b",
+      "\\1 duele la pierna"
+    ],
+    [
+      "\\b(tomamos|tomar|tom[eé]|tom[oó]|tomo)\\s+una\\s+cana\\b",
+      "\\1 una cerveza"
+    ],
+    [
+      "\\buna\\s+cana\\s+fr[ií]a\\b",
+      "una cerveza fría"
+    ],
+    [
+      "\\bla\\s+cana\\s+(lo|la|los|las|me|te|nos)\\s+(agarr[oó]|llev[oó]|par[oó]|detuvo|detuvieron|enganch[oó]|corri[oó])\\b",
+      "la policía \\1 \\2"
+    ],
+    [
+      "\\b((?:lo|la|los|las|me|te|nos)\\s+(?:agarr[oó]|llev[oó]|par[oó]|detuvo|detuvieron))\\s+la\\s+cana\\b",
+      "\\1 la policía"
+    ],
+    [
+      "\\b(vino|cay[oó]|lleg[oó]|apareci[oó])\\s+la\\s+cana\\b",
+      "\\1 la policía"
+    ],
+    [
+      "\\b(llam[oóa]|llamaron|avis[oó]|avisaron)\\s+a\\s+la\\s+cana\\b",
+      "\\1 a la policía"
+    ],
+    [
+      "\\ben\\s+cana\\b",
+      "en la cárcel"
+    ],
+    [
+      "\\bla\\s+cana\\b",
+      "la policía"
+    ],
+    [
+      "\\bmedia\\s+pila\\b",
+      "más voluntad"
+    ],
+    [
+      "\\bqu[eé]\\s+paja\\b",
+      "qué pereza"
+    ],
+    [
+      "\\bal\\s+horno\\b",
+      "en problemas"
+    ],
+    [
+      "\\buna\\s+masa\\b",
+      "muy bueno"
+    ],
+    [
+      "\\bme\\s+cabe\\b",
+      "me gusta"
+    ],
+    [
+      "\\bno\\s+me\\s+cabe\\b",
+      "no me parece bien"
+    ],
+    [
+      "\\bdar\\s+bola\\b",
+      "prestar atención"
+    ],
+    [
+      "\\bme\\s+dio\\s+bola\\b",
+      "me atendió"
+    ],
+    [
+      "\\bhacerse\\s+el\\s+(?:boludo|gil)\\b",
+      "hacerse el distraído"
+    ],
+    [
+      "\\bde\\s+diez\\b",
+      "perfecto"
+    ],
+    [
+      "\\bni\\s+cabida\\b",
+      "ni atención"
+    ],
+    [
+      "\\bme\\s+da\\s+cosa\\b",
+      "me da vergüenza"
+    ],
+    [
+      "\\bla\\s+pas[eé]\\s+bomba\\b",
+      "la pasé muy bien"
+    ],
+    [
+      "\\bse\\s+zarpa\\b",
+      "exagera"
+    ],
+    [
+      "\\bno\\s+pega\\s+una\\b",
+      "no acierta ninguna"
+    ],
+    [
+      "\\ba\\s+ver\\s+si\\s+(?:me|nos)\\s+dan\\s+bola\\b",
+      "espero que me atiendan"
+    ],
+    [
+      "\\b(?:me|nos)\\s+dan\\s+bola\\b",
+      "me atienden"
+    ],
+    [
+      "\\bme\\s+den\\s+bola\\b",
+      "me atiendan"
+    ],
+    [
+      "\\bden\\s+bola\\b",
+      "presten atención"
+    ],
+    [
+      "\\banda\\s+para\\s+atr[aá]s\\b",
+      "funciona mal"
+    ]
+  ]
+}
